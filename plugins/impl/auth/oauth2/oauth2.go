@@ -1,7 +1,10 @@
+// Package main for oauth 2.0
+
 package main
 
 import "fmt"
 
-func main()  {
+// main
+func main() {
 	fmt.Printf("oauth plugin")
 }
