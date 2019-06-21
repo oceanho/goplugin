@@ -20,7 +20,7 @@ func Serializer(value interface{}) (string, error) {
 	return string(byteData), nil
 }
 
-// Serializer a interface to byte array, return json byte array if successful.
+// SerializerToBytes a interface to byte array, return json byte array if successful.
 // Return nil,error if json.Marshal() fail
 func SerializerToBytes(value interface{}) ([]byte, error) {
 	byte, err := json.Marshal(value)
@@ -36,7 +36,7 @@ func Deserializer(value string, result interface{}) error {
 	return DeserializerFromBytes([]byte(value), result)
 }
 
-// Deserializer a byte array to interface, return json string if successful.
+// DeserializerFromBytes a byte array to interface, return json string if successful.
 // Return "",error if json.Marshal() fail
 func DeserializerFromBytes(value []byte, result interface{}) error {
 	if json.Valid(value) {
